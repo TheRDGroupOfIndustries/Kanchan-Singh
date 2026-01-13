@@ -30,7 +30,7 @@ export const Service = () => {
                         visible: { transition: { staggerChildren: 0.1 } },
                         hidden: {}
                     }}
-                    className="gap-x-8 grid grid-cols-1 gap-y-8 md:grid-cols-[repeat(3,minmax(0px,1fr))]"
+                    className="gap-x-8 grid grid-cols-1 gap-y-8 md:grid-cols-[repeat(3,minmax(0px,1fr))] "
                 >
                     {[
                         {
@@ -88,7 +88,7 @@ export const Service = () => {
                                 damping: 20
                             }}
                             className={`p-8 rounded-[32px] shadow-[0_10px_30px_rgba(0,0,0,0.03)] transition-all cursor-default flex flex-col items-start ${service.variant ||
-                                "bg-[linear-gradient(to_right_bottom,rgb(255,255,255),rgba(245,230,211,0.3))]"
+                                "bg-[linear-gradient(to_right_bottom,rgb(255,255,255),rgba(245,230,211,0.3))] border-2 border-[#D4A574]/30"
                                 }`}
                         >
                             <div className="text-white items-center bg-[#D4A574] flex h-16 justify-center w-16 mb-8 rounded-2xl shadow-lg ring-4 ring-[#D4A574]/10">
