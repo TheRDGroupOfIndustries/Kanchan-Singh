@@ -196,7 +196,7 @@ export const Contact = () => {
                                     className="items-start flex group"
                                 >
                                     <a
-                                        href={item.title === "WhatsApp" ? "https://wa.me/919454992002" : item.title === "Email" ? `mailto:${item.info}` : item.title === "Instagram" ? "https://www.instagram.com/themissup_kanchansingh_makeup" : "#"}
+                                        href={item.title === "WhatsApp" ? "https://wa.me/919454992002" : item.title === "Email" ? `mailto:${item.info}` : item.title === "Instagram" ? "https://www.instagram.com/themiss.up_kanchansingh" : "#"}
                                         target={item.title === "WhatsApp" || item.title === "Instagram" ? "_blank" : "_self"}
                                         className="flex items-start"
                                     >
