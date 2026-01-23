@@ -71,14 +71,14 @@ export const Hero = () => {
                     className="flex justify-center mt-8"
                 >
                     {[
-                        { icon: "ri-instagram-line", href: "#" },
-                        { icon: "ri-youtube-line", href: "#" },
+                        { icon: "ri-instagram-line", target: "_blank", href: "https://www.instagram.com/themiss.up_kanchansingh" },
                         { icon: "ri-facebook-fill", href: "#" },
                     ].map((item, index) => (
                         <motion.a
                             whileHover={{ y: -5, scale: 1.1 }}
                             key={index}
                             href={item.href}
+                            target={item.target}
                             className={`text-white items-center backdrop-blur-sm bg-white/20 flex h-12 justify-center w-12 rounded-lg hover:text-gray-900 hover:bg-white transition-all ${index > 0 ? "ml-6" : ""}`}
                         >
                             <i className={`${item.icon} text-2xl`} />

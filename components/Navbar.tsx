@@ -41,7 +41,8 @@ export const Navbar = () => {
                     <div className="items-center flex">
                         {/* Desktop Instagram Icon */}
                         <a
-                            href="#"
+                            href="https://www.instagram.com/themissup_kanchansingh_makeup" 
+                            target="_blank"
                             className="text-gray-700 items-center hidden md:flex h-10 justify-center w-10 hover:text-[#D4A574] transition-colors"
                         >
                             <i className="ri-instagram-line text-2xl" />

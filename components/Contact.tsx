@@ -16,13 +16,13 @@ export const Contact = () => {
                     <h2 className="text-gray-900 text-4xl font-bold leading-10 mb-6 font-playfair_display md:text-5xl md:leading-[48px]">
                         Get In Touch
                     </h2>
-                    <p className="text-gray-600 text-xl leading-7 max-w-screen-md mx-auto">
+                    <p className="text-gray-600 text-lg md:text-xl leading-7 max-w-screen-md mx-auto">
                         Ready to book your session or discuss a collaboration? I&#39;d love
                         to hear from you
                     </p>
                 </motion.div>
 
-                <div className="gap-x-16 grid grid-cols-none gap-y-12 md:grid-cols-[repeat(2,minmax(0px,1fr))] md:gap-y-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
                     {/* Contact Form */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -30,7 +30,7 @@ export const Contact = () => {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <div className="bg-[linear-gradient(to_right_bottom,rgba(245,230,211,0.3),rgb(255,255,255))] shadow-[0_10px_30px_rgba(0,0,0,0.05)] p-8 rounded-lg">
+                        <div className="bg-[linear-gradient(to_right_bottom,rgba(245,230,211,0.3),rgb(255,255,255))] shadow-[0_10px_30px_rgba(0,0,0,0.05)] p-6 md:p-8 rounded-2xl">
                             <h3 className="text-gray-900 text-2xl font-bold leading-8 mb-6 font-playfair_display">
                                 Send Me a Message
                             </h3>
@@ -123,7 +123,7 @@ export const Contact = () => {
 
                         <motion.div
                             whileHover={{ y: -5 }}
-                            className="bg-[linear-gradient(to_right_bottom,rgba(212,165,116,0.1),rgba(245,230,211,0.2))] mt-12 p-8 rounded-3xl border border-[#D4A574]/10"
+                            className="bg-[linear-gradient(to_right_bottom,rgba(212,165,116,0.1),rgba(245,230,211,0.2))] mt-8 md:mt-12 p-6 md:p-8 rounded-3xl border border-[#D4A574]/10"
                         >
                             <h4 className="text-gray-900 text-xl font-bold leading-7 mb-3 font-playfair_display">
                                 Studio Opening Soon!

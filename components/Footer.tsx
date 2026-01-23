@@ -13,14 +13,14 @@ export const Footer = () => {
                         </p>
                         <div className="flex">
                             {[
-                                { icon: "ri-instagram-line", href: "#" },
-                                { icon: "ri-youtube-line", href: "#" },
-                                { icon: "ri-facebook-fill", href: "#" },
+                                { icon: "ri-instagram-line", href: "https://www.instagram.com/themissup_kanchansingh_makeup", target:"_blank" },
+                                { icon: "ri-facebook-line", href: "#" },
                                 { icon: "ri-whatsapp-line", href: "#" },
                             ].map((social, index) => (
                                 <a
                                     key={index}
                                     href={social.href}
+                                    target={social.target}
                                     className={`items-center bg-gray-800 flex h-11 justify-center w-11 rounded-xl shadow-lg transition-all hover:bg-[#D4A574] hover:-translate-y-1 ${index > 0 ? "ml-3" : ""
                                         }`}
                                 >
