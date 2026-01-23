@@ -193,22 +193,28 @@ export const Contact = () => {
                                 <motion.div
                                     whileHover={{ x: 10 }}
                                     key={index}
-                                    className="items-start flex group cursor-default"
+                                    className="items-start flex group"
                                 >
-                                    <div className="text-white items-center bg-[#D4A574] flex shrink-0 h-12 justify-center w-12 rounded-lg shadow-md transition-transform group-hover:scale-110">
-                                        <div className={`text-2xl ${item.icon}`} />
-                                    </div>
-                                    <div className="ml-4">
-                                        <h4 className="text-gray-900 font-semibold mb-1">
-                                            {item.title}
-                                        </h4>
-                                        <p className="text-gray-600">
-                                            {item.info}
-                                        </p>
-                                        <p className="text-gray-500 text-sm leading-5">
-                                            {item.sub}
-                                        </p>
-                                    </div>
+                                    <a
+                                        href={item.title === "WhatsApp" ? "https://wa.me/919876543210" : item.title === "Email" ? `mailto:${item.info}` : item.title === "Instagram" ? "https://www.instagram.com/themissup_kanchansingh_makeup" : "#"}
+                                        target={item.title === "WhatsApp" || item.title === "Instagram" ? "_blank" : "_self"}
+                                        className="flex items-start"
+                                    >
+                                        <div className="text-white items-center bg-[#D4A574] flex shrink-0 h-12 justify-center w-12 rounded-lg shadow-md transition-transform group-hover:scale-110">
+                                            <div className={`text-2xl ${item.icon}`} />
+                                        </div>
+                                        <div className="ml-4">
+                                            <h4 className="text-gray-900 font-semibold mb-1">
+                                                {item.title}
+                                            </h4>
+                                            <p className="text-gray-600">
+                                                {item.info}
+                                            </p>
+                                            <p className="text-gray-500 text-sm leading-5">
+                                                {item.sub}
+                                            </p>
+                                        </div>
+                                    </a>
                                 </motion.div>
                             ))}
                         </div>

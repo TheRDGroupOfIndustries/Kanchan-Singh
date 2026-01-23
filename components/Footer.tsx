@@ -15,7 +15,7 @@ export const Footer = () => {
                             {[
                                 { icon: "ri-instagram-line", href: "https://www.instagram.com/themissup_kanchansingh_makeup", target:"_blank" },
                                 { icon: "ri-facebook-line", href: "#" },
-                                { icon: "ri-whatsapp-line", href: "#" },
+                                { icon: "ri-whatsapp-line", href: "https://wa.me/919876543210", target: "_blank" },
                             ].map((social, index) => (
                                 <a
                                     key={index}

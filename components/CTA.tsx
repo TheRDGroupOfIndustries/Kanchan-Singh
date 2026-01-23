@@ -32,15 +32,16 @@ export const CTA = () => {
                             Book Appointment
                         </motion.a>
 
-                        <motion.button
-                            initial={{ backgroundColor: "rgba(255, 255, 255, 0)", color: "#FFFFFF" }}
+                        <motion.a
                             whileHover={{ scale: 1.05, backgroundColor: "#FFFFFF", color: "#D4A574" }}
                             whileTap={{ scale: 0.95 }}
+                            href="https://wa.me/919876543210"
+                            target="_blank"
                             className="text-white text-lg font-semibold items-center bg-transparent font-sans gap-x-2 flex justify-center leading-7 text-nowrap px-8 py-4 rounded-lg border border-white"
                         >
                             <i className="ri-whatsapp-line text-2xl" />
                             WhatsApp Me
-                        </motion.button>
+                        </motion.a>
 
                         <motion.button
                             initial={{ backgroundColor: "rgba(255, 255, 255, 0)", color: "#FFFFFF" }}
