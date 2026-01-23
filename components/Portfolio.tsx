@@ -71,11 +71,11 @@ export const Portfolio = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-gray-900 text-4xl font-bold leading-10 mb-6 font-playfair_display md:text-5xl md:leading-[48px]">
+                    <h2 className="text-gray-900 text-3xl font-bold leading-10 mb-6 font-playfair_display md:text-5xl md:leading-[48px]">
                         Portfolio
                     </h2>
 
-                    <p className="text-gray-600 text-xl leading-7 max-w-screen-md mb-8 mx-auto">
+                    <p className="text-gray-600 text-lg md:text-xl leading-7 max-w-screen-md mb-8 mx-auto">
                         Explore my work across different styles and occasions
                     </p>
 
@@ -88,7 +88,7 @@ export const Portfolio = () => {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 onClick={() => setActiveFilter(filter)}
-                                className={`px-8 py-3 rounded-full font-medium transition-all shadow-md ${activeFilter === filter
+                                className={`px-5 md:px-8 py-2 md:py-3 rounded-full font-medium transition-all shadow-md text-sm md:text-base ${activeFilter === filter
                                     ? "text-white bg-[#D4A574]"
                                     : "text-gray-600 bg-gray-100/80 hover:bg-gray-200"
                                     }`}

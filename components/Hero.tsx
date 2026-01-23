@@ -7,7 +7,7 @@ export const Hero = () => {
         <section id="home" className="relative items-center bg-[url('https://static.readdy.ai/image/212f826998e30550905f3cdedc108f72/8bbe68aef96d825c0e186812e3702f8b.jpeg')] bg-cover flex min-h-screen justify-center overflow-hidden bg-center py-20">
             <div className="absolute bg-[linear-gradient(to_right,rgba(0,0,0,0.7),rgba(0,0,0,0.5),rgba(0,0,0,0.6))] inset-0" />
             <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 className="relative max-w-4xl text-center z-10 mx-auto px-6"

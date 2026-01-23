@@ -62,7 +62,7 @@ export const Contact = () => {
     };
 
     return (
-        <section id="contact" className="bg-white py-12 md:py-20">
+        <section id="contact" className="bg-white py-12 md:py-20 overflow-hidden">
             <div className="max-w-screen-xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -83,7 +83,7 @@ export const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
                     {/* Contact Form */}
                     <motion.div
-                        initial={{ opacity: 0, x: -30 }}
+                        initial={{ opacity: 0, x: typeof window !== 'undefined' && window.innerWidth < 768 ? -20 : -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
@@ -178,7 +178,7 @@ export const Contact = () => {
 
                     {/* Contact Info */}
                     <motion.div
-                        initial={{ opacity: 0, x: 30 }}
+                        initial={{ opacity: 0, x: typeof window !== 'undefined' && window.innerWidth < 768 ? 20 : 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}

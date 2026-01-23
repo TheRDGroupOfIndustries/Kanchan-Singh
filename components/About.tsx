@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 export const About = () => {
     return (
-        <section id="about" className="bg-[linear-gradient(rgb(255,255,255),rgba(245,230,211,0.2))]  py-12 md:py-20">
+        <section id="about" className="bg-[linear-gradient(rgb(255,255,255),rgba(245,230,211,0.2))] py-12 md:py-20 overflow-hidden">
             <div className="max-w-screen-xl mx-auto px-6">
                 <div className="items-center gap-x-16 grid grid-cols-none gap-y-10 md:grid-cols-[repeat(2,minmax(0px,1fr))] md:gap-y-16">
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
+                        initial={{ opacity: 0, x: typeof window !== 'undefined' && window.innerWidth < 768 ? -20 : -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
@@ -21,30 +21,30 @@ export const About = () => {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, x: 50 }}
+                        initial={{ opacity: 0, x: typeof window !== 'undefined' && window.innerWidth < 768 ? 20 : 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-gray-900 text-4xl font-bold leading-tight mb-6 font-playfair_display md:text-5xl md:leading-[48px]">
+                        <h2 className="text-gray-900 text-3xl font-bold leading-tight mb-6 font-playfair_display md:text-5xl md:leading-[48px]">
                             My Journey
                         </h2>
 
-                        <p className="text-gray-700 text-lg leading-[29.25px] mb-6">
+                        <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
                             From walking the runway as Miss Uttar Pradesh 2024 to creating
                             stunning makeup transformations, my journey has been about celebrating
                             beauty in all its forms. What started as a passion for modeling
                             evolved into a deep love for makeup artistry.
                         </p>
 
-                        <p className="text-gray-700 text-lg leading-[29.25px] mb-6">
+                        <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
                             With years of experience in the fashion industry and extensive
                             training in professional makeup techniques, I bring a unique
                             perspective that combines high-fashion aesthetics with personalized
                             beauty solutions.
                         </p>
 
-                        <p className="text-gray-700 text-lg leading-[29.25px] mb-8">
+                        <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-8">
                             Today, I&#39;m not just creating looks – I&#39;m building confidence,
                             one face at a time. My upcoming makeup studio represents the next
                             chapter in making professional beauty services accessible to everyone.

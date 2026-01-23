@@ -13,7 +13,7 @@ export const Testimonials = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-gray-900 text-4xl font-bold leading-10 mb-6 font-playfair_display md:text-5xl md:leading-[48px]">
+                    <h2 className="text-gray-900 text-3xl font-bold leading-10 mb-6 font-playfair_display md:text-5xl md:leading-[48px]">
                         What Clients Say
                     </h2>
                 </motion.div>
@@ -55,7 +55,7 @@ export const Testimonials = () => {
                                 visible: { opacity: 1, y: 0 }
                             }}
                             whileHover={{ y: -5, boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}
-                            className="bg-[linear-gradient(to_right_bottom,rgba(245,230,211,0.3),rgb(255,255,255))] shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-4px_rgba(0,0,0,0.1)] p-8 rounded-3xl transition-all"
+                            className="bg-[linear-gradient(to_right_bottom,rgba(245,230,211,0.3),rgb(255,255,255))] shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-4px_rgba(0,0,0,0.1)] p-6 md:p-8 rounded-3xl transition-all"
                         >
                             <div className="items-center flex mb-4">
                                 <div className="text-[#D4A574] flex gap-1">

@@ -13,7 +13,7 @@ export const Achievement = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-gray-900 text-4xl font-bold leading-10 mb-6 font-playfair_display md:text-5xl md:leading-[48px]">
+                    <h2 className="text-gray-900 text-3xl font-bold leading-10 mb-6 font-playfair_display md:text-5xl md:leading-[48px]">
                         Achievements &amp; Recognition
                     </h2>
                 </motion.div>
@@ -57,7 +57,7 @@ export const Achievement = () => {
                                 visible: { opacity: 1, y: 0 }
                             }}
                             whileHover={{ y: -5 }}
-                            className="text-center group"
+                            className="text-center group border border-[#D4A574]/10 p-4 md:p-0 rounded-2xl md:border-none"
                         >
                             <motion.div
                                 whileHover={{ rotate: 10, scale: 1.1 }}

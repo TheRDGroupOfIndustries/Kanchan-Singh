@@ -13,10 +13,10 @@ export const Service = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-gray-900 text-4xl font-bold leading-10 mb-6 font-playfair_display md:text-5xl md:leading-[48px]">
+                    <h2 className="text-gray-900 text-3xl font-bold leading-10 mb-6 font-playfair_display md:text-5xl md:leading-[48px]">
                         Services
                     </h2>
-                    <p className="text-gray-600 text-xl leading-7 max-w-screen-md mx-auto">
+                    <p className="text-gray-600 text-lg md:text-xl leading-7 max-w-screen-md mx-auto">
                         From bridal transformations to high-fashion photoshoots, I offer
                         comprehensive beauty services tailored to your unique needs
                     </p>
