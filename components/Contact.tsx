@@ -1,8 +1,66 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        service: "Select Service",
+        message: "",
+    });
+    const [status, setStatus] = useState<{
+        loading: boolean;
+        success: boolean;
+        error: string | null;
+    }>({
+        loading: false,
+        success: false,
+        error: null,
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+        const { name, value } = e.target;
+
+        if (name === "phone") {
+            // Only allow numbers
+            const numericValue = value.replace(/[^0-9]/g, "");
+            setFormData((prev) => ({ ...prev, [name]: numericValue }));
+        } else {
+            setFormData((prev) => ({ ...prev, [name]: value }));
+        }
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setStatus({ loading: true, success: false, error: null });
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus({ loading: false, success: true, error: null });
+                setFormData({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    service: "Select Service",
+                    message: "",
+                });
+            } else {
+                throw new Error("Failed to send message. Please try again.");
+            }
+        } catch (err: any) {
+            setStatus({ loading: false, success: false, error: err.message });
+        }
+    };
+
     return (
         <section id="contact" className="bg-white py-12 md:py-20">
             <div className="max-w-screen-xl mx-auto px-6">
@@ -34,10 +92,14 @@ export const Contact = () => {
                             <h3 className="text-gray-900 text-2xl font-bold leading-8 mb-6 font-playfair_display">
                                 Send Me a Message
                             </h3>
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <div>
                                     <input
                                         type="text"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        required
                                         placeholder="Your Name"
                                         className="text-sm leading-5 w-full border border-gray-200 px-4 py-3 rounded-lg border-solid focus:border-[#D4A574] focus:ring-1 focus:ring-[#D4A574] outline-none transition-all"
                                     />
@@ -45,6 +107,10 @@ export const Contact = () => {
                                 <div className="mt-6">
                                     <input
                                         type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
                                         placeholder="Your Email"
                                         className="text-sm leading-5 w-full border border-gray-200 px-4 py-3 rounded-lg border-solid focus:border-[#D4A574] focus:ring-1 focus:ring-[#D4A574] outline-none transition-all"
                                     />
@@ -52,22 +118,36 @@ export const Contact = () => {
                                 <div className="mt-6">
                                     <input
                                         type="tel"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        required
                                         placeholder="Phone Number"
                                         className="text-sm leading-5 w-full border border-gray-200 px-4 py-3 rounded-lg border-solid focus:border-[#D4A574] focus:ring-1 focus:ring-[#D4A574] outline-none transition-all"
                                     />
                                 </div>
                                 <div className="mt-6">
-                                    <select className="text-sm bg-zinc-100 leading-[normal] w-full border border-gray-200 pl-4 pr-8 py-3 rounded-lg focus:border-[#D4A574] focus:ring-1 focus:ring-[#D4A574] outline-none transition-all cursor-pointer">
-                                        <option>Select Service</option>
-                                        <option>Bridal Makeup</option>
-                                        <option>Party &amp; Events</option>
-                                        <option>Photoshoot Makeup</option>
-                                        <option>Influencer Collaboration</option>
-                                        <option>Makeup Workshop</option>
+                                    <select
+                                        name="service"
+                                        value={formData.service}
+                                        onChange={handleChange}
+                                        required
+                                        className="text-sm bg-zinc-100 leading-[normal] w-full border border-gray-200 pl-4 pr-8 py-3 rounded-lg focus:border-[#D4A574] focus:ring-1 focus:ring-[#D4A574] outline-none transition-all cursor-pointer"
+                                    >
+                                        <option value="Select Service" disabled>Select Service</option>
+                                        <option value="Bridal Makeup">Bridal Makeup</option>
+                                        <option value="Party & Events">Party &amp; Events</option>
+                                        <option value="Photoshoot Makeup">Photoshoot Makeup</option>
+                                        <option value="Influencer Collaboration">Influencer Collaboration</option>
+                                        <option value="Makeup Workshop">Makeup Workshop</option>
                                     </select>
                                 </div>
                                 <div className="mt-6">
                                     <textarea
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
                                         placeholder="Tell me about your requirements..."
                                         className="text-sm leading-5 w-full border border-gray-200 px-4 py-3 rounded-lg focus:border-[#D4A574] focus:ring-1 focus:ring-[#D4A574] outline-none transition-all min-h-[120px]"
                                     />
@@ -75,11 +155,23 @@ export const Contact = () => {
                                 <motion.button
                                     whileHover={{ scale: 1.02, boxShadow: "0 10px 20px rgba(212,165,116,0.3)" }}
                                     whileTap={{ scale: 0.98 }}
+                                    disabled={status.loading}
                                     type="submit"
-                                    className="text-white font-semibold bg-[#D4A574] text-center text-nowrap w-full mt-6 px-0 py-3 rounded-lg hover:bg-[#D4A574]/90 transition-all shadow-md"
+                                    className={`text-white font-semibold bg-[#D4A574] text-center text-nowrap w-full mt-6 px-0 py-3 rounded-lg hover:bg-[#D4A574]/90 transition-all shadow-md ${status.loading ? "opacity-70 cursor-not-allowed" : ""}`}
                                 >
-                                    Send Message
+                                    {status.loading ? "Sending..." : "Send Message"}
                                 </motion.button>
+
+                                {status.success && (
+                                    <p className="mt-4 text-green-600 text-center font-semibold">
+                                        Message sent successfully!
+                                    </p>
+                                )}
+                                {status.error && (
+                                    <p className="mt-4 text-red-600 text-center font-semibold">
+                                        {status.error}
+                                    </p>
+                                )}
                             </form>
                         </div>
                     </motion.div>
@@ -95,8 +187,8 @@ export const Contact = () => {
                             {[
                                 { title: "WhatsApp", info: "+91 98765 43210", sub: "Available 9 AM - 8 PM", icon: "ri-whatsapp-line" },
                                 { title: "Email", info: "kanchan@makeupstudio.com", sub: "I'll respond within 24 hours", icon: "ri-mail-line" },
-                                { title: "Instagram", info: "@kanchansingh_official", sub: "DM me for quick responses", icon: "ri-instagram-line" },
-                                { title: "Location", info: "Lucknow, Uttar Pradesh", sub: "Studio opening soon in Gomti Nagar", icon: "ri-map-pin-line" },
+                                { title: "Instagram", info: "@themiss.up_kanchansingh", sub: "DM me for quick responses", icon: "ri-instagram-line" },
+                                { title: "Location", info: "Varanasi, Uttar Pradesh", sub: "Studio opening soon in Gomti Nagar", icon: "ri-map-pin-line" },
                             ].map((item, index) => (
                                 <motion.div
                                     whileHover={{ x: 10 }}

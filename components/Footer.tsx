@@ -64,7 +64,7 @@ export const Footer = () => {
                     <div>
                         <h4 className="font-semibold mb-4">Contact Info</h4>
                         <ul className="text-gray-300 list-none pl-0">
-                            {["+91 98765 43210", "kanchan@makeupstudio.com", "Lucknow, Uttar Pradesh", "Available 9 AM - 8 PM"].map((info, index) => (
+                            {["+91 98765 43210", "kanchan@makeupstudio.com", "Varanasi, Uttar Pradesh", "Available 9 AM - 8 PM"].map((info, index) => (
                                 <li key={index} className={index > 0 ? "mt-2" : ""}>{info}</li>
                             ))}
                         </ul>
