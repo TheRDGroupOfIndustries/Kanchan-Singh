@@ -43,15 +43,16 @@ export const CTA = () => {
                             WhatsApp Me
                         </motion.a>
 
-                        <motion.button
-                            initial={{ backgroundColor: "rgba(255, 255, 255, 0)", color: "#FFFFFF" }}
+                        <motion.a
                             whileHover={{ scale: 1.05, backgroundColor: "#FFFFFF", color: "#D4A574" }}
                             whileTap={{ scale: 0.95 }}
+                            href="https://www.instagram.com/themissup_kanchansingh_makeup"
+                            target="_blank"
                             className="text-white text-lg font-semibold items-center bg-transparent font-sans gap-x-2 flex justify-center leading-7 text-nowrap px-8 py-4 rounded-lg border border-white"
                         >
                             <i className="ri-instagram-line text-2xl" />
                             Instagram DM
-                        </motion.button>
+                        </motion.a>
                     </div>
                 </motion.div>
             </div>
