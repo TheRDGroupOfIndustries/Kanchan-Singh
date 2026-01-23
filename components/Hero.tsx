@@ -72,6 +72,7 @@ export const Hero = () => {
                 >
                     {[
                         { icon: "ri-instagram-line", target: "_blank", href: "https://www.instagram.com/themiss.up_kanchansingh" },
+                        { icon: "ri-instagram-line", target: "_blank", href: "https://www.instagram.com/themissup_kanchansingh_makeup" },
                         { icon: "ri-facebook-fill", href: "#" },
                     ].map((item, index) => (
                         <motion.a

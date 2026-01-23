@@ -185,7 +185,7 @@ export const Contact = () => {
                     >
                         <div className="gap-y-8 flex flex-col">
                             {[
-                                { title: "WhatsApp", info: "+91 98765 43210", sub: "Available 9 AM - 8 PM", icon: "ri-whatsapp-line" },
+                                { title: "WhatsApp", info: "+91 94549 92002", sub: "Available 9 AM - 8 PM", icon: "ri-whatsapp-line" },
                                 { title: "Email", info: "kanchan@makeupstudio.com", sub: "I'll respond within 24 hours", icon: "ri-mail-line" },
                                 { title: "Instagram", info: "@themiss.up_kanchansingh", sub: "DM me for quick responses", icon: "ri-instagram-line" },
                                 { title: "Location", info: "Varanasi, Uttar Pradesh", sub: "Studio opening soon in Gomti Nagar", icon: "ri-map-pin-line" },
@@ -196,7 +196,7 @@ export const Contact = () => {
                                     className="items-start flex group"
                                 >
                                     <a
-                                        href={item.title === "WhatsApp" ? "https://wa.me/919876543210" : item.title === "Email" ? `mailto:${item.info}` : item.title === "Instagram" ? "https://www.instagram.com/themissup_kanchansingh_makeup" : "#"}
+                                        href={item.title === "WhatsApp" ? "https://wa.me/919454992002" : item.title === "Email" ? `mailto:${item.info}` : item.title === "Instagram" ? "https://www.instagram.com/themissup_kanchansingh_makeup" : "#"}
                                         target={item.title === "WhatsApp" || item.title === "Instagram" ? "_blank" : "_self"}
                                         className="flex items-start"
                                     >

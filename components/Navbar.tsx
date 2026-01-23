@@ -47,6 +47,13 @@ export const Navbar = () => {
                         >
                             <i className="ri-instagram-line text-2xl" />
                         </a>
+                        <a
+                            href="https://www.instagram.com/themiss.up_kanchansingh" 
+                            target="_blank"
+                            className="text-gray-700 items-center hidden md:flex h-10 justify-center w-10 hover:text-[#D4A574] transition-colors"
+                        >
+                            <i className="ri-instagram-line text-2xl" />
+                        </a>
                         {/* Desktop Book Now Button */}
                         <a
                             href="#contact"

@@ -14,8 +14,8 @@ export const Footer = () => {
                         <div className="flex">
                             {[
                                 { icon: "ri-instagram-line", href: "https://www.instagram.com/themissup_kanchansingh_makeup", target:"_blank" },
-                                { icon: "ri-facebook-line", href: "#" },
-                                { icon: "ri-whatsapp-line", href: "https://wa.me/919876543210", target: "_blank" },
+                                { icon: "ri-instagram-line", href: "https://www.instagram.com/themiss.up_kanchansingh", target:"_blank" },
+                                { icon: "ri-whatsapp-line", href: "https://wa.me/919454992002", target: "_blank" },
                             ].map((social, index) => (
                                 <a
                                     key={index}
@@ -50,8 +50,6 @@ export const Footer = () => {
                                 { text: "About Me", href: "#about" },
                                 { text: "Portfolio", href: "#portfolio" },
                                 { text: "Contact", href: "#contact" },
-                                { text: "Booking Policy", href: "#" },
-                                { text: "FAQ", href: "#" },
                             ].map((link, index) => (
                                 <li key={index} className={index > 0 ? "mt-2" : ""}>
                                     <a href={link.href} className="hover:text-[#D4A574] transition-colors">{link.text}</a>
@@ -64,7 +62,7 @@ export const Footer = () => {
                     <div>
                         <h4 className="font-semibold mb-4">Contact Info</h4>
                         <ul className="text-gray-300 list-none pl-0">
-                            {["+91 98765 43210", "kanchan@makeupstudio.com", "Varanasi, Uttar Pradesh", "Available 9 AM - 8 PM"].map((info, index) => (
+                            {["+91 94549 92002", "kanchan@makeupstudio.com", "Varanasi, Uttar Pradesh", "Available 9 AM - 8 PM"].map((info, index) => (
                                 <li key={index} className={index > 0 ? "mt-2" : ""}>{info}</li>
                             ))}
                         </ul>

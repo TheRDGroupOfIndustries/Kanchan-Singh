@@ -35,7 +35,7 @@ export const CTA = () => {
                         <motion.a
                             whileHover={{ scale: 1.05, backgroundColor: "#FFFFFF", color: "#D4A574" }}
                             whileTap={{ scale: 0.95 }}
-                            href="https://wa.me/919876543210"
+                            href="https://wa.me/919454992002"
                             target="_blank"
                             className="text-white text-lg font-semibold items-center bg-transparent font-sans gap-x-2 flex justify-center leading-7 text-nowrap px-8 py-4 rounded-lg border border-white"
                         >
