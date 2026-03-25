@@ -13,7 +13,7 @@ export const Portfolio = () => {
             alt: "Bridal Makeup",
             title: "Traditional Bridal Look",
             subtitle: "Royal Indian Style",
-            src: "https://readdy.ai/api/search-image?query=stunning%20Indian%20bridal%20makeup%20look%20with%20traditional%20gold%20jewelry%20and%20red%20lehenga%20in%20elegant%20studio%20setting%20with%20soft%20lighting%20showcasing%20flawless%20makeup%20artistry%20and%20beauty&width=400&height=500&seq=portfolio1&orientation=portrait"
+            src: "/images/image1.jpeg"
         },
         {
             id: 2,
@@ -21,7 +21,7 @@ export const Portfolio = () => {
             alt: "Fashion Makeup",
             title: "Editorial Fashion",
             subtitle: "Bold & Contemporary",
-            src: "https://readdy.ai/api/search-image?query=high%20fashion%20editorial%20makeup%20look%20with%20bold%20colors%20and%20dramatic%20styling%20in%20modern%20studio%20with%20professional%20lighting%20showcasing%20creative%20makeup%20artistry%20and%20contemporary%20beauty&width=400&height=500&seq=portfolio2&orientation=portrait"
+            src: "/images/image2.jpeg"
         },
         {
             id: 3,
@@ -29,7 +29,7 @@ export const Portfolio = () => {
             alt: "Fashion Makeup",
             title: "Fashion Glamour",
             subtitle: "Vibrant Portfolio",
-            src: "https://readdy.ai/api/search-image?query=high%20fashion%20editorial%20makeup%20look%20with%20bold%20colors%20and%20dramatic%20styling%20in%20modern%20studio%20with%20professional%20lighting%20showcasing%20creative%20makeup%20artistry%20and%20contemporary%20beauty&width=400&height=500&seq=portfolio3&orientation=portrait"
+            src: "/images/image3.jpeg"
         },
         {
             id: 4,
@@ -37,7 +37,7 @@ export const Portfolio = () => {
             alt: "Modern Bridal",
             title: "Modern Bridal",
             subtitle: "Soft Glam Look",
-            src: "https://readdy.ai/api/search-image?query=elegant%20modern%20bridal%20makeup%20with%20soft%20glam%20look%20and%20contemporary%20styling%20in%20luxury%20setting%20with%20natural%20lighting%20showcasing%20sophisticated%20bridal%20beauty%20and%20makeup%20artistry&width=400&height=500&seq=portfolio4&orientation=portrait",
+            src: "/images/image4.jpeg",
         },
         {
             id: 5,
@@ -45,7 +45,7 @@ export const Portfolio = () => {
             alt: "Fashion Art",
             title: "Runway Style",
             subtitle: "High Fashion Look",
-            src: "https://readdy.ai/api/search-image?query=glamorous%20party%20makeup%20look%20with%20shimmery%20eyeshadow%20and%20bold%20lips%20in%20elegant%20studio%20setting%20showcasing%20evening%20makeup%20artistry%20and%20sophisticated%20beauty%20styling&width=400&height=500&seq=portfolio5&orientation=portrait",
+            src: "/images/image5.jpeg",
         },
         {
             id: 6,
@@ -53,7 +53,7 @@ export const Portfolio = () => {
             alt: "Natural Beauty",
             title: "Natural Glow",
             subtitle: "Minimalist Aesthetic",
-            src: "https://readdy.ai/api/search-image?query=natural%20beauty%20makeup%20look%20with%20flawless%20skin%20and%20subtle%20enhancement%20in%20bright%20studio%20setting%20showcasing%20minimalist%20makeup%20artistry%20and%20natural%20glowing%20beauty&width=400&height=500&seq=portfolio6&orientation=portrait",
+            src: "/images/image6.jpeg",
         },
     ];
 
